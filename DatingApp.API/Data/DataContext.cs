@@ -7,6 +7,7 @@ namespace DatingApp.API.Data
     
         public DataContext(DbContextOptions<DataContext> options ):base (options){}
         public DbSet<Value> Values { get; set; }
-        //protected  override void  OnModelCreating(ModelBuilder modelBuilder) => base.OnModelCreating(modelBuilder);
+        public DbSet<User> Users { get; set; }
+        protected  override void  OnModelCreating(ModelBuilder modelBuilder) => base.OnModelCreating(modelBuilder);
     }
 }
