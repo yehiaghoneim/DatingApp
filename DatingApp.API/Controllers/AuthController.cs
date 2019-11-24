@@ -29,7 +29,7 @@ namespace DatingApp.API.Controllers
 
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(UserForRegisterDTO userForRegisterDTO)
+        public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDTO)
         {
             userForRegisterDTO.Username =userForRegisterDTO.Username.ToLower();
             if( await _repo.UerExists(userForRegisterDTO.Username))
@@ -45,7 +45,7 @@ namespace DatingApp.API.Controllers
             return StatusCode(201);    
         }
         [HttpPost("login")]
-        public async Task<IActionResult> Login (UserForLoginDTO userForLoginDTO)
+        public async Task<IActionResult> Login (UserForLoginDto userForLoginDTO)
         {
             var userFromRepo=await _repo.Login(userForLoginDTO.Username,userForLoginDTO.Password);
             if(userFromRepo==null)
