@@ -7,6 +7,7 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { UserService } from './_services/user.service';
 import { appRoutes } from './routes';
 import { NgxGalleryModule } from 'ngx-gallery';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 import { AuthService } from './_services/Auth.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -50,7 +51,8 @@ export function tokenGetter() {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      TimeAgoPipe
    ],
    imports: [
       BrowserModule,
